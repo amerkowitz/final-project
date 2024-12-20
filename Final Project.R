@@ -95,9 +95,9 @@ head(joined)
 #plot temps and sea levels
 
 ggplot(data = joined, # data for plot
-      aes(x = sltrend, y=temptrend) )+ # aes, x and y
+      aes(x=temptrend,  y=sltrend,) )+ # aes, x and y
   geom_point()+ 
-  labs(x="Monthly Average Temperature", y="Monthly Mean Sea Level") # make axis labels
+  labs(x="Monthly Average Temperature (degrees F)", y="Monthly Mean Sea Level (meters)") # make axis labels
 
 #join precip
 joined2 <- full_join(joined, # left table
@@ -304,9 +304,9 @@ head(joined)
 #plot temps and sea levels
 
 ggplot(data = joinedkey, # data for plot
-       aes(x = sltrend, y=temptrend) )+ # aes, x and y
+       aes(x = temptrend, y=sltrend) )+ # aes, x and y
   geom_point()+ 
-  labs(x="Monthly Average Temperature", y="Monthly Mean Sea Level") # make axis labels
+  labs(x="Monthly Average Temperature (degrees F)", y="Monthly Mean Sea Level (meters)") # make axis labels
 
 #join precip
 joinedkey2 <- full_join(joinedkey, # left table
